@@ -3,19 +3,22 @@ env:
   browser: true
   commonjs: true
 
-extends: ['plugin:react/recommended']
+extends: [
+  'eslint:recommended',
+  'plugin:react/recommended',
+  'plugin:@typescript-eslint/eslint-recommended',
+  'plugin:@typescript-eslint/recommended',
+  'plugin:@typescript-eslint/recommended-requiring-type-checking',
+]
+
+parser: '@typescript-eslint/parser'
 
 parserOptions:
-  ecmaFeatures:
-    jsx: true
-  ecmaVersion: 6
-  sourceType: module
+  project: 'tsconfig.json'
+  tsconfigRootDir: '.'
 
-plugins: ['react']
+plugins: ['react', '@typescript-eslint']
 
 settings:
   react:
     version: '16'
-
-rules:
-  indent: ['error', 2, {'SwitchCase': 1}]

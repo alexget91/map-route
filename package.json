@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "test project",
   "scripts": {
-    "eslint": "eslint --ext .jsx --ext .js src/",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "test": "npm run eslint",
     "build": "webpack --mode production",
     "start": "webpack-dev-server"
@@ -14,6 +14,8 @@
     "@babel/preset-env": "7.9.5",
     "@babel/preset-react": "7.9.4",
     "@types/react": "16.9.34",
+    "@typescript-eslint/eslint-plugin": "2.27.0",
+    "@typescript-eslint/parser": "2.27.0",
     "babel-loader": "8.1.0",
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.19.0",
